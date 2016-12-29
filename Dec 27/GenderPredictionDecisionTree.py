@@ -10,6 +10,9 @@ from scipy import sparse
 # Importing SKLEARN library for performing machine learning task lke creating a decision tree using multiple parameters
 from sklearn import tree
 
+#from IPython.display import Image
+
+
 #[Height, Weight, Shoe size]
 X=[[181,80,44],[177,70,43],[160,60,38],[154,54,37],[166,65,40],[190,90,47],[175,64,39],[177,70,40],[159,55,37],[171,75,42],[181,85,43]]
 
@@ -20,6 +23,10 @@ clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X,Y)
 
 # 'prediction' variable now returns the prediction with maximum probability as a result from decision tree
-prediction = clf.predict([[180,79,43]])
+prediction = clf.predict([[159,56,40]])
+
+print(clf)
 
 print(prediction)
+
+#print(clf.predict_proba([[180,79,43]]))
